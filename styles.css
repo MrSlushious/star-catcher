@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #0074D9);
+    color: white;
+    overflow: hidden;
+  }
+  
+  #game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    border: 2px solid #fff;
+  }
+  
+#basket {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 60px;
+    background: brown;
+    border-radius: 10px 10px 0 0;
+    border: 3px solid #8b4513;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  #basket:before {
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: #8b4513;
+    position: absolute;
+    bottom: -20px;
+    border-radius: 50%;
+  }
+  
+  /* Stars */
+  .star {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #ffff66, #ffd700);
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.8);
+    animation: twinkle 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+  
+  /* Asteroids */
+  .asteroid {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: gray;
+    border-radius: 50%;
+    box-shadow: none;
+  }
+  
+  /* Red Glowing Balls */
+  .red-ball {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #ff6666, #ff0000);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 0.8;
+    }
+  }
+
+/* Support button */
+#support-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  #support-button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Support window */
+  #support-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #support-content {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #support-content h2 {
+    margin: 0 0 10px;
+  }
+  
+  #social-links a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #0074D9;
+    text-decoration: none;
+  }
+  
+  #social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  #close-support {
+    margin-top: 20px;
+    background: #0074D9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #close-support:hover {
+    background: #005bb5;
+  }
+
+/* Social media link boxes */
+#social-links a {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #social-links a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Specific platform colors */
+  #social-links .github {
+    background-color: #333;
+  }
+  
+  #social-links .youtube {
+    background-color: #FF0000;
+  }
+  
+  #social-links .tiktok {
+    background-color: #000000;
+  }
+  
+  
